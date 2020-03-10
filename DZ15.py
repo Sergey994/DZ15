@@ -1,9 +1,9 @@
-from random import randint
+def is_simple(n: int):
+    if n < 1:
+        return False
 
+    for i in range(2, n):
+        if n % i == 0:
+            return False
 
-def list_generator():
-    res = []
-    for i in range(1, randint(50)):
-        res.append(randint(-100, 100))
-
-    return res
+    return True
